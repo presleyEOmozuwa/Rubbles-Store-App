@@ -1,8 +1,20 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("App Component", () => {
+  test('renders h1 text context', () => {
+    render(<App />);
+    const headElement = screen.getByRole("heading", {level: 1});
+    expect(headElement).toBeInTheDocument();
+  });
+
+  test('renders p text context', () => {
+    render(<App />);
+    const paraElement = screen.getByText("Build and test your app");
+    expect(paraElement).toBeInTheDocument();
+  });
 });
+
+
+
+
