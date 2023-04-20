@@ -1,10 +1,10 @@
 import './App.css';
+import Movie from './UI/Movie/Movie';
 
 function App() {
   return (
     <div className="App">
-      <h1>App Component</h1>
-      <p>Build and test your app</p>
+      <Movie directorName={"Perry Smith"}/>
     </div>
   );
 }
